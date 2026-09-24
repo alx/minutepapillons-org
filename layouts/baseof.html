@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{{ .Title }}</title>
+<link rel='stylesheet' href='/assets/core/blocks/navigation/style.min.css%3Fver=7.1.1.css' media='all' />
+<link rel='stylesheet' href='/assets/core/blocks/cover/style.min.css%3Fver=7.1.1.css' media='all' />
+<link rel='stylesheet' href='/assets/uploads/useanyfont/uaf.css%3Fver=1771419484.css' media='all' />
+<link rel='stylesheet' href='/assets/plugins/contact-lite/assets/css/frontend/modern/contact-full.min.css%3Fver=1.9.9.2.css' media='all' />
+<link rel='stylesheet' href='/css/head-inline.css' media='all' />
+</head>
+<body class="custom-logo embed-responsive theme-twentytwentyfour">
+<div class="site-blocks">
+{{ partial "header.html" . }}
+{{ block "main" . }}{{ end }}
+{{ partial "footer.html" . }}
+</div>
+<script>
+/* minimal accessible menu toggle (replaces the previous CMS behaviour) */
+(function () {
+  var openBtn = document.querySelector('.block-navigation__responsive-container-open');
+  var box = document.querySelector('.block-navigation__responsive-container');
+  var closeBtn = document.querySelector('.block-navigation__responsive-close');
+  if (!openBtn || !box) return;
+  function setOpen(on) {
+    box.classList.toggle('is-menu-open', on);
+    openBtn.classList.toggle('is-menu-open', on);
+    box.setAttribute('aria-hidden', on ? 'false' : 'true');
+  }
+  openBtn.addEventListener('click', function () { setOpen(true); });
+  if (closeBtn) closeBtn.addEventListener('click', function () { setOpen(false); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+</body>
+</html>

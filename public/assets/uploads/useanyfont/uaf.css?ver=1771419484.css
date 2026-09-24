@@ -1,0 +1,10 @@
+				@font-face {
+					font-family: 'giant-boys';
+					src: url('7652Giant-Boys.woff2') format('woff2'),
+						url('7652Giant-Boys.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.giant-boys{font-family: 'giant-boys' !important;}
+
+		
