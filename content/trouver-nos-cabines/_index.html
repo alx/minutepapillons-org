@@ -10,15 +10,33 @@ markup: html
 </div>
 
 
+<style>
+.cabine-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:28px;max-width:1200px;margin:0 auto;padding:0 24px}
+.cabine-card{background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:8px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 1px 6px rgba(0,0,0,.06)}
+.cabine-card img{width:100%;height:260px;object-fit:cover;display:block}
+.cabine-card .cabine-body{padding:16px 18px 20px;display:flex;flex-direction:column;gap:8px;flex:1}
+.cabine-card h2{font-size:1.25rem;margin:0;line-height:1.25}
+.cabine-card p{margin:0;font-size:.95rem;line-height:1.5;color:#333}
+.cabine-card p.cabine-soon{font-style:italic;color:#853349}
+.cabine-card .cabine-empty{height:260px;display:flex;align-items:center;justify-content:center;background:#f6efee;font-style:italic;color:#853349}
+@media (max-width:600px){.cabine-grid{grid-template-columns:repeat(2,1fr);gap:14px}.cabine-card img,.cabine-card .cabine-empty{height:180px}}
+</style>
 <div class="entry-content block-post-content has-global-padding is-content-justification-center is-layout-constrained container-core-post-content-is-layout-be1838d7 block-post-content-is-layout-constrained">
-<div class="block-group alignwide is-content-justification-center is-nowrap is-layout-flex container-core-group-is-layout-8fcd6282 block-group-is-layout-flex">
-<iframe src="https://www.google.com/maps/d/embed?mid=1I8KZ-wHP3hzojtQ1i4MSfL6naS5i0z0&#038;ehbc=2E312F&#038;noprof=1" width="800" height="600"></iframe>
-
-
-
-<figure class="block-image size-full container-content-577e1c61"><img decoding="async" width="1146" height="856" src="/assets/uploads/2026/01/CRANE-R@3x.png" alt="" class="image-373" style="object-fit:cover" srcset="/assets/uploads/2026/01/CRANE-R@3x.png 1146w, /assets/uploads/2026/01/CRANE-R@3x-300x224.png 300w, /assets/uploads/2026/01/CRANE-R@3x-1024x765.png 1024w, /assets/uploads/2026/01/CRANE-R@3x-768x574.png 768w" sizes="(max-width: 1146px) 100vw, 1146px" /></figure>
+<div class="cabine-grid">
+<figure class="cabine-card"><img decoding="async" loading="lazy" src="/assets/uploads/cabines/le-bikini.jpg" alt="Cabine Le Bikini" /><figcaption class="cabine-body"><h2>Le Bikini</h2><p>Depuis 2023. In Bikini Dura Rock</p></figcaption></figure>
+<figure class="cabine-card"><img decoding="async" loading="lazy" src="/assets/uploads/cabines/suzon.jpg" alt="Cabine Suzon" /><figcaption class="cabine-body"><h2>Suzon</h2><p>Cabine ambiance 70's pour cette friperie</p></figcaption></figure>
+<figure class="cabine-card"><img decoding="async" loading="lazy" src="/assets/uploads/cabines/little-o-clock.jpg" alt="Cabine Little O'Clock" /><figcaption class="cabine-body"><h2>Little O'Clock</h2><p>La plus ancienne cabine, tour à tour prototype argentique puis numérique elle a subi pléthore de relooking</p></figcaption></figure>
+<figure class="cabine-card"><img decoding="async" loading="lazy" src="/assets/uploads/cabines/flashback-caf-toulouse.jpg" alt="Cabine Flashback Café Toulouse" /><figcaption class="cabine-body"><h2>Flashback Café Toulouse</h2><p>Le lieu idéal pour poser le premier photophone</p></figcaption></figure>
+<figure class="cabine-card"><img decoding="async" loading="lazy" src="/assets/uploads/cabines/les-halles-de-la-cartoucherie.jpg" alt="Cabine aux Halles de la Cartoucherie" /><figcaption class="cabine-body"><h2>Les Halles de la Cartoucherie</h2></figcaption></figure>
+<figure class="cabine-card"><img decoding="async" loading="lazy" src="/assets/uploads/cabines/la-cabane-les-halles-de-la-cartoucherie.jpg" alt="Cabine La Cabane, Les Halles de la Cartoucherie" /><figcaption class="cabine-body"><h2>La Cabane</h2><p>Les Halles de la Cartoucherie</p></figcaption></figure>
+<figure class="cabine-card"><img decoding="async" loading="lazy" src="/assets/uploads/cabines/les-500.jpg" alt="Cabine Les 500" /><figcaption class="cabine-body"><h2>Les 500</h2><p>Déco intérieure par un artiste Toulousain et possibilité de choix du format de la photo grâce au clavier du téléphone</p></figcaption></figure>
+<figure class="cabine-card"><div class="cabine-empty" role="img" aria-label="Bientôt">bientôt</div><figcaption class="cabine-body"><h2>Le Metronum</h2><p>Scène de musiques actuelles de Toulouse</p><p class="cabine-soon">Soon — février 2026</p></figcaption></figure>
 </div>
 
+
+<div class="block-group alignwide is-content-justification-center is-nowrap is-layout-flex container-core-group-is-layout-8fcd6282 block-group-is-layout-flex">
+<iframe src="https://www.google.com/maps/d/embed?mid=1I8KZ-wHP3hzojtQ1i4MSfL6naS5i0z0&#038;ehbc=2E312F&#038;noprof=1" width="800" height="600"></iframe>
+</div>
 
 
 <div class="block-group has-global-padding is-layout-constrained block-group-is-layout-constrained"></div>
