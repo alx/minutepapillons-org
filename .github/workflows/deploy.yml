@@ -25,6 +25,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Rewrite asset URLs for project-Pages subpath
+        # Source + committed public/ use root-absolute URLs (works for
+        # `hugo serve` at "/"). For the project Pages subpath we prefix
+        # them at deploy time only. See scripts/pages-prefix.sh.
+        run: bash scripts/pages-prefix.sh /minutepapillons-org
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
