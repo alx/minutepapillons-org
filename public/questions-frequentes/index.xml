@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Questions fréquentes on Minute papillons</title>
-    <link>https://alx.github.io/minutepapillons-org/questions-frequentes/</link>
+    <link>/questions-frequentes/</link>
     <description>Recent content in Questions fréquentes on Minute papillons</description>
     <generator>Hugo</generator>
     <language>fr-FR</language>
-    <atom:link href="https://alx.github.io/minutepapillons-org/questions-frequentes/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/questions-frequentes/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
