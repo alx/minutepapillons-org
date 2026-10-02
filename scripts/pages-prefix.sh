@@ -30,12 +30,14 @@ find public -type f \( -name '*.html' -o -name '*.css' \) -print0 | xargs -0 sed
   -e "s|'/css/|'/${CORE}/css/|g" \
   -e "s|url(/assets/|url(/${CORE}/assets/|g" \
   -e "s|url(\"/assets/|url(\"${CORE}/assets/|g" \
-  -e "s|url('/assets/|url('${CORE}/assets/|g"
+  -e "s|url('/assets/|url('${CORE}/assets/|g" \
+  -e "s|, /assets/|, /${CORE}/assets/|g"
 
-# Sanity check: no bare root refs may remain.
-if grep -rlE "(href|src)=[\"']/(assets|css)/" public/ 2>/dev/null | grep -v "minutepapillons-org" | grep -q .; then
+# Sanity check: no bare root refs may remain (any occurrence of /assets/ or
+# /css/ preceded by a quote, comma, or opening paren must be prefixed).
+if grep -rnE "[\"',] */(assets|css)/" public/ 2>/dev/null | grep -v "/${CORE}/" | grep -q .; then
   echo "ERROR: unprefixed refs remain in public/:" >&2
-  grep -rnE "(href|src)=[\"']/(assets|css)/" public/ | grep -v "${CORE}" | head >&2
+  grep -rnE "[\"',] */(assets|css)/" public/ | grep -v "/${CORE}/" | head >&2
   exit 1
 fi
 
