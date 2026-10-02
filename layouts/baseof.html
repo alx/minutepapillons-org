@@ -11,9 +11,10 @@
 <link rel='stylesheet' href='/css/head-inline.css' media='all' />
 </head>
 <body class="custom-logo embed-responsive theme-twentytwentyfour">
+<a class="skip-link screen-reader-text" href="#main">Aller au contenu</a>
 <div class="site-blocks">
 {{ partial "header.html" . }}
-{{ block "main" . }}{{ end }}
+<main id="main">{{ block "main" . }}{{ end }}</main>
 {{ partial "footer.html" . }}
 </div>
 <script>
