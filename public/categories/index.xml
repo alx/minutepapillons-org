@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Minute papillons</title>
-    <link>/categories/</link>
+    <link>https://alx.github.io/minutepapillons-org/categories/</link>
     <description>Recent content in Categories on Minute papillons</description>
     <generator>Hugo</generator>
     <language>fr-FR</language>
-    <atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://alx.github.io/minutepapillons-org/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

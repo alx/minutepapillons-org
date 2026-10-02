@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Acheter le kit électronique on Minute papillons</title>
-    <link>/acheter-le-kit/</link>
+    <link>https://alx.github.io/minutepapillons-org/acheter-le-kit/</link>
     <description>Recent content in Acheter le kit électronique on Minute papillons</description>
     <generator>Hugo</generator>
     <language>fr-FR</language>
-    <atom:link href="/acheter-le-kit/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://alx.github.io/minutepapillons-org/acheter-le-kit/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

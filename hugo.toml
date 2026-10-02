@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://alx.github.io/minutepapillons-org/"
 languageCode = "fr-FR"
 defaultContentLanguage = "fr"
 title = "Minute papillons"

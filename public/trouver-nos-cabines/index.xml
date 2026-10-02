@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>trouver nos cabines on Minute papillons</title>
-    <link>/trouver-nos-cabines/</link>
+    <link>https://alx.github.io/minutepapillons-org/trouver-nos-cabines/</link>
     <description>Recent content in trouver nos cabines on Minute papillons</description>
     <generator>Hugo</generator>
     <language>fr-FR</language>
-    <atom:link href="/trouver-nos-cabines/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://alx.github.io/minutepapillons-org/trouver-nos-cabines/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
