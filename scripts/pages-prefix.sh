@@ -19,6 +19,27 @@ if grep -rq "/${CORE}/assets/" public/ 2>/dev/null; then
   exit 1
 fi
 
+# WordPress-style versioned assets: the WP mirror kept literal "?ver=..." in
+# some asset FILENAMES (e.g. style.min.css?ver=7.1.1.css) and the HTML refs
+# encode them as %3Fver=... . GitHub Pages cannot route those: server-side the
+# "?" starts a query string, so the request 404s. Strip the version suffix at
+# deploy time only (source/public keep the WP-mirror convention).
+find public -type f -name '*[?]*' -print0 | while IFS= read -r -d '' f; do
+  case "$f" in
+    *'?ver='*) ;;
+    *) echo "ERROR: unexpected '?' in filename: $f" >&2; exit 1 ;;
+  esac
+  clean="${f%%[?]ver=*}"
+  if [ -e "$clean" ]; then
+    echo "ERROR: rename would clobber existing $clean" >&2; exit 1
+  fi
+  mv "$f" "$clean"
+  echo "renamed -> $clean"
+done
+
+find public -type f \( -name '*.html' -o -name '*.css' \) -print0 | xargs -0 sed -i \
+  -e 's|%3Fver=[0-9.]*\.[A-Za-z0-9]*||g'
+
 # Order matters: the href rule runs FIRST so it prefixes href="/assets/..
 # in one step and the asset rules (which require a quote right before the
 # path) can never re-match the already-prefixed string.
