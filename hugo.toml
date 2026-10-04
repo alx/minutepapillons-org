@@ -1,4 +1,23 @@
 baseURL = "/"
-languageCode = "fr-FR"
 defaultContentLanguage = "fr"
 title = "Minute papillons"
+
+# Multilingual: FR is the default language (served at the site root, e.g.
+# /louez-moi/), EN lives under the /en/ language subdirectory.
+# Docs: https://gohugo.io/content-management/multilingual/
+# NB (Hugo >= 0.159): languages.*.contentDir is relative to the project
+# root, so it must include the "content/" prefix.
+
+[languages.fr]
+weight = 1
+locale = "fr-FR"
+label = "Français"
+contentDir = "content/fr"
+title = "Minute papillons"
+
+[languages.en]
+weight = 2
+locale = "en-US"
+label = "English"
+contentDir = "content/en"
+title = "Minute Papillons"

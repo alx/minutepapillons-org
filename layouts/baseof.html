@@ -1,9 +1,13 @@
 <!DOCTYPE html>
-<html lang="fr-FR">
+<html lang="{{ .Site.Language.Locale }}">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>{{ .Title }}</title>
+{{ range .AllTranslations }}
+<link rel="alternate" hreflang="{{ .Language.Locale }}" href="{{ .Permalink }}" />
+{{ end }}
+<link rel="alternate" hreflang="x-default" href="{{ range hugo.Sites }}{{ if .IsDefault }}{{ .Home.Permalink }}{{ end }}{{ end }}" />
 <link rel='stylesheet' href='/assets/core/blocks/navigation/style.min.css%3Fver=7.1.1.css' media='all' />
 <link rel='stylesheet' href='/assets/core/blocks/cover/style.min.css%3Fver=7.1.1.css' media='all' />
 <link rel='stylesheet' href='/assets/uploads/useanyfont/uaf.css%3Fver=1771419484.css' media='all' />
