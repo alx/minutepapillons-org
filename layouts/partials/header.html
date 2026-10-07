@@ -12,7 +12,7 @@
 							<div class="block-navigation__responsive-container-content"
 			 id="modal-1-content">
 								<ul style="font-size:clamp(14px, 0.875rem + ((1vw - 3.2px) * 0.625), 20px)" class="block-navigation__container has-text-color has-custom-titre-color has-background has-custom-fond-background-color is-responsive items-justified-center no-wrap block-navigation has-giant-boys-font-family">{{ range site.Menus.main }}<li class="block-navigation-item block-navigation-link has-giant-boys-font-family"><a class="block-navigation-item__content"  href="{{ .URL }}"><span class="block-navigation-item__label">{{ .Name }}</span></a></li>{{ end }}</ul>
-<nav aria-label="Language" class="lang-switcher">{{ range .AllTranslations }}<a href="{{ .RelPermalink }}"{{ if eq .Language.Lang $.Language.Lang }} aria-current="true"{{ end }} title="{{ .Language.Label }}">{{ .Language.Label }}</a>{{ end }}</nav>
+<nav aria-label="Language" class="lang-switcher">{{ range .AllTranslations }}<a href="{{ .RelPermalink }}"{{ if eq .Language.Lang $.Language.Lang }} aria-current="true"{{ end }} title="{{ .Language.Label }}" aria-label="{{ .Language.Label }}">{{ if eq .Language.Lang "fr" }}🇫🇷{{ else if eq .Language.Lang "en" }}🇬🇧{{ else }}{{ .Language.Label }}{{ end }}</a>{{ end }}</nav>
 								
 							</div>
 						</div>

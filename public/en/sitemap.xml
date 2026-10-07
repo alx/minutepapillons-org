@@ -2,6 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>/en/agenda/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr-FR"
+                href="/agenda/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="/en/agenda/"
+                />
+  </url><url>
     <loc>/en/acheter-le-kit/</loc>
     <xhtml:link
                 rel="alternate"

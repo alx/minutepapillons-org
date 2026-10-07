@@ -14,6 +14,18 @@
                 href="/acheter-le-kit/"
                 />
   </url><url>
+    <loc>/agenda/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="/en/agenda/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr-FR"
+                href="/agenda/"
+                />
+  </url><url>
     <loc>/categories/</loc>
     <xhtml:link
                 rel="alternate"
