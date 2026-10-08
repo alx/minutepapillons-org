@@ -226,3 +226,6 @@ h1:where(.block-heading).has-background,h2:where(.block-heading).has-background,
 
 .container-core-navigation-is-layout-7a0b1db9{flex-wrap:nowrap;gap:0;justify-content:center;}.container-core-group-is-layout-d9d95ed6{flex-direction:column;align-items:center;justify-content:center;}.container-content-577e1c61{flex-basis:20%;}.container-core-group-is-layout-8fcd6282{flex-wrap:nowrap;justify-content:center;align-items:flex-start;}.container-core-post-content-is-layout-be1838d7 > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width:100%;margin-left:auto !important;margin-right:auto !important;}.container-core-post-content-is-layout-be1838d7 > .alignwide{max-width:99.8%;}.container-core-post-content-is-layout-be1838d7 .alignfull{max-width:none;}.elements-1 a:where(:not(.element-button)){color:var(---preset--color--custom-fond);}.container-core-columns-is-layout-51e24405{flex-wrap:nowrap;gap:1.2rem 0;}
 /*# sourceURL=core-block-supports-inline-css */
+
+/* navbar: lang switcher */
+nav.lang-switcher > *:first-child{margin-right:5px}
